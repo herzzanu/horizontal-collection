@@ -1,5 +1,5 @@
 {
-  "name": "vertical-collection",
+  "name": "horizontal-collection",
   "dependencies": {},
   "devDependencies": {
     "bootstrap": "~3.3.5"

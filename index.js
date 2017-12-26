@@ -29,7 +29,7 @@ function isProductionEnv() {
 }
 
 module.exports = {
-  name: 'vertical-collection',
+  name: 'horizontal-collection',
 
   init() {
     this._super.init && this._super.init.apply(this, arguments);
@@ -47,7 +47,7 @@ module.exports = {
         isProductionEnv() ? '-debug' : false
       ].filter(Boolean),
 
-      destDir: 'vertical-collection'
+      destDir: 'horizontal-collection'
     });
 
     let privateTree = babel.transpileTree(withPrivate, {
@@ -69,7 +69,7 @@ module.exports = {
       rollup: {
         entry: '-private/index.js',
         targets: [
-          { dest: 'vertical-collection/-private.js', format: 'amd', moduleId: 'vertical-collection/-private' }
+          { dest: 'horizontal-collection/-private.js', format: 'amd', moduleId: 'horizontal-collection/-private' }
         ],
         external: ['ember', 'ember-raf-scheduler']
       }
@@ -125,8 +125,8 @@ module.exports = {
     }
 
     if (typeof app.import !== 'function') {
-      throw new Error('vertical-collection is being used within another addon or engine ' +
-        'and is having trouble registering itself to the parent application.');
+      throw new Error('horizontal-collection is being used within another addon or engine '
+        + 'and is having trouble registering itself to the parent application.');
     }
 
     this._env = app.env;
@@ -147,7 +147,7 @@ module.exports = {
     }
 
     if (this.checker.forEmber().isAbove('1.13.0')) {
-      exclude.push('initializers/vertical-collection-legacy-compat.js');
+      exclude.push('initializers/horizontal-collection-legacy-compat.js');
     }
 
     return new Funnel(tree, { exclude });

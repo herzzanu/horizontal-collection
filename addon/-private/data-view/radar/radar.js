@@ -282,7 +282,7 @@ export default class Radar {
       _scrollContainer
     } = this;
 
-    assert('Must provide a `estimateWidth` value to vertical-collection', estimateWidth !== null);
+    assert('Must provide a `estimateWidth` value to horizontal-collection', estimateWidth !== null);
     assert('itemContainer must be set on Radar before scheduling an update', _itemContainer !== null);
     assert('scrollContainer must be set on Radar before scheduling an update', _scrollContainer !== null);
 

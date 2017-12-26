@@ -13,7 +13,7 @@ export default class Visualization {
     this.cache = [];
 
     this.wrapper = document.createElement('div');
-    this.wrapper.className = 'vertical-collection-visual-debugger';
+    this.wrapper.className = 'horizontal-collection-visual-debugger';
 
     this.container = document.createElement('div');
     this.container.className = 'vc_visualization-container';

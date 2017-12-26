@@ -1,6 +1,6 @@
-import 'vertical-collection/-debug';
+import 'horizontal-collection/-debug';
 
 export default {
-  name: 'vertical-collection-debug',
+  name: 'horizontal-collection-debug',
   initialize() {}
 };

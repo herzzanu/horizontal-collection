@@ -13,7 +13,7 @@ export default Controller.extend({
 
   actions: {
 
-    loadAbove() {
+    loadBefore() {
       let first = this.get('model.first');
       let numbers = getNumbers(first - 20, 20);
       let model = this.get('model.numbers');
@@ -22,7 +22,7 @@ export default Controller.extend({
       this.set('model.first', first - 20);
     },
 
-    loadBelow() {
+    loadAfter() {
       let last = this.get('model.last');
       let numbers = getNumbers(last, 20);
       let model = this.get('model.numbers');

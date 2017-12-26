@@ -63,7 +63,7 @@ export default class VirtualComponent {
 
         const text = upperBound.textContent;
 
-        assert(`All content inside of vertical-collection must be wrapped in an element. Detected a text node with content: ${text}`, text === '' || text.match(/^\s+$/));
+        assert(`All content inside of horizontal-collection must be wrapped in an element. Detected a text node with content: ${text}`, text === '' || text.match(/^\s+$/));
       }
     }
 
